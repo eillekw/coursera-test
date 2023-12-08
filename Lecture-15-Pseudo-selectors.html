@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pseudo Class Selectors</title>
+<style>
+
+/* to style unordered list as a menu */
+header li {
+  list-style: none; /*to remove the bullet points */
+}
+
+/*define the states of the links - it can be just a link or a link that the user have already opened. In this case, we are styling them together, so both are lablled as 'a' */
+a:link, a:visited {
+  text-decoration: none; /*to remove the underline*/
+  background-color: green; /* similar to highlight */
+  border: 1px solid blue; 
+  color: black; /* colour of text */
+  display: block; /*change to block-level element, to get it to fill all the space it possibly can, to mimic the look of a menu */
+  width: 200px; /* to restrict the length of the block */
+  text-align: center;
+  margin-bottom: 1px; /* to create space between each item in the list */
+}
+
+/*defining more states */
+/* changes when we hover over the links */
+a:hover, a:active {
+  background-color: red;
+  color: purple; /*colour of text*/
+}
+
+/* this targets the list item that is inside (at any level) of a header, and nth-child helps us pick out the exact item we want to target, which is the third one in this case */
+header li:nth-child(3) {
+  font-size: 24px;
+}
+
+section div:nth-child(odd) {
+  background-color: grey
+}
+
+/* to combine pseudo-class, we can do this below. We are changing the style of the 4th item when we hover over it */
+section div:nth-child(4):hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<h1>Pseudo Class Selectors</h1>
+
+<header>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
+    <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
+  </ul>
+</header>
+
+<section>
+  <div>DIV 1</div>
+  <div>DIV 2</div>
+  <div>DIV 3</div>
+  <div>DIV 4</div>
+  <div>DIV 5</div>
+  <div>DIV 6</div>
+  <div>DIV 7</div>
+  <div>DIV 8</div>
+  <div>DIV 9</div>
+  <div>DIV 10</div>
+  <div>DIV 11</div>
+  <div>DIV 12</div>
+  <div>DIV 13</div>
+  <div>DIV 14</div>
+  <div>DIV 15</div>
+  <div>DIV 16</div>
+  <div>DIV 17</div>
+  <div>DIV 18</div>
+  <div>DIV 19</div>
+  <div>DIV 20</div>
+</section>
+
+</body>
+</html>
