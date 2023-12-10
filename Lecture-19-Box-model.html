@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+*{
+	box-sizing: border-box;
+  /* ensures that the box, padding and border fits the 'width' */
+  /* the next two lines is to reset brower settings */
+  	margin: 0;
+  	padding: 0;
+}
+
+body {
+  background-color: gray;
+
+}
+
+#box {
+  background-color: blue;
+  /*to re-define the padding here*/
+  /* top, right, bottom, left */
+  padding: 10px 10px 10px 10px;
+  border: 5px solid black;
+  margin: 40px 40px 40px 40px;
+  /* padding, border and margin are different. Padding is coloured by the background colour, border has to be defined again but margin is not coloured (its like the background spacing). */
+  /* (inner most) width of box < padding < border < margin */
+  height: 100px;
+  width: 300px;
+  /* width of the box */
+  margin-top: 20px;
+  overflow: auto;
+  /* overflow: hidden; will clip the text to fit in the box, i.e. not all the content will be shown if content is longer than the box.
+  overflow: auto; will allow scrolling of content within a box if the contant is longer than the box */
+}
+#content {
+  background-color: #90EE90; /*green*/
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean euismod elementum nisi quis eleifend. Habitasse platea dictumst quisque sagittis purus. In cursus turpis massa tincidunt dui. Convallis tellus id interdum velit laoreet id donec ultrices. Mattis enim ut tellus elementum. In mollis nunc sed id semper risus. Rutrum quisque non tellus orci. Leo vel fringilla est ullamcorper eget. Ipsum a arcu cursus vitae. Habitant morbi tristique senectus et netus et malesuada fames. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Pulvinar etiam non quam lacus. Sem viverra aliquet eget sit amet tellus cras. Odio ut sem nulla pharetra diam sit amet. In massa tempor nec feugiat nisl. Est ultricies integer quis auctor elit sed vulputate mi sit. Phasellus egestas tellus rutrum tellus pellentesque. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. </div>
+</div>
+
+
+</body>
+</html>
